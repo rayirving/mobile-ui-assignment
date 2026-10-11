@@ -24,7 +24,7 @@ export default function Index() {
         <View style={styles.headerLeft}>
           <Image
             source={{
-              uri: "https://images.chesscomfiles.com/uploads/v1/user/279806493.53f4c4e2.200x200o.7a09133998d7.jpg",
+              uri: "https://images.chesscomfiles.com/uploads/v1/user/164493423.9c85fc9c.200x200o.01efe6654eb7.jpg",
             }}
             style={styles.avatarSmall}
           />
