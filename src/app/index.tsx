@@ -8,236 +8,369 @@ export default function Index() {
     <View
       style={[
         styles.screen,
-        {
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
-        },
+        { paddingTop: insets.top, paddingBottom: insets.bottom },
       ]}
     >
-      <View style={styles.header}></View>
-      <ScrollView contentContainerStyle={{ gap: 30 }}>
+      <View style={[styles.header, styles.inset]}>
+        <View style={styles.headerLeft}>
+          <Image
+            source={{
+              uri: "https://images.chesscomfiles.com/uploads/v1/user/279806493.53f4c4e2.200x200o.7a09133998d7.jpg",
+            }}
+            style={styles.avatarSmall}
+          />
+          <Image
+            source={{
+              uri: "https://static.wikia.nocookie.net/chess/images/3/32/LightKnight.png/revision/latest?cb=20230320152142",
+            }}
+            style={styles.iconSmall}
+          />
+          <Image
+            source={require("../../assets/images/fire.png")}
+            style={styles.iconSmall}
+          />
+          <Text style={styles.mainText}>355</Text>
+        </View>
+        <View style={styles.headerRight}>
+          <Image
+            source={require("../../assets/images/diamond.png")}
+            style={styles.iconSmall}
+          />
+          <Image
+            source={require("../../assets/images/group.png")}
+            style={styles.iconSmall}
+          />
+        </View>
+      </View>
+
+      <ScrollView contentContainerStyle={styles.scrollContent}>
         <ScrollView
           horizontal={true}
-          contentContainerStyle={[
-            styles.horizontalScrollBar,
-            styles.bodySection,
-            styles.topBodySection,
-          ]}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={[styles.scrollbar, styles.inset]}
         >
-          <View style={[styles.body_container_large, styles.body_box]}>
+          <View style={[styles.card, styles.cardLarge]}>
             <Image
               source={{
                 uri: "https://images.chesscomfiles.com/uploads/v1/user/596498884.29b3ac57.384x384o.38afbf9fb911.png",
               }}
-              style={[styles.networkImageIcon]}
+              style={styles.iconStandard}
             />
-            <Text>Play Bots</Text>
-            <Text>Count Morphy</Text>
+            <Text style={styles.mainText}>Play Bots</Text>
+            <Text style={styles.subText}>Count Morphy</Text>
           </View>
-          <View style={[styles.body_container_large, styles.body_box]}>
+          <View style={[styles.card, styles.cardLarge]}>
             <Image
               source={{
                 uri: "https://assets-coaches.chess.com/image/coachlevy.png?v=9f98615d",
               }}
-              style={[styles.networkImageIcon]}
+              style={styles.iconStandard}
             />
-            <Text>Play Coach</Text>
-            <Text>Levy</Text>
+            <Text style={styles.mainText}>Play Coach</Text>
+            <Text style={styles.subText}>Levy</Text>
           </View>
-          <View style={[styles.body_container_long, styles.body_box]}></View>
-          <View style={[styles.body_container_large, styles.body_box]}>
+          <View style={[styles.card, styles.cardWide]} />
+          <View style={[styles.card, styles.cardLarge]}>
             <Image
               source={require("../../assets/images/calendar-dailypuzzle.png")}
-              style={[styles.networkImageIcon]}
+              style={styles.iconStandard}
             />
-            <Text>Play Coach</Text>
-            <Text>Levy</Text>
+            <Text style={styles.mainText}>Play Coach</Text>
+            <Text style={styles.subText}>Levy</Text>
           </View>
-          <View style={[styles.body_container_long, styles.body_box]}></View>
+          <View style={[styles.card, styles.cardWide]} />
         </ScrollView>
 
-        <View style={[styles.namedSection, styles.bodySection]}>
-          <Text style={styles.body_heading_text}>Recommended Match</Text>
-          <View style={[styles.recommended_section, styles.staticBar]}>
+        <View style={[styles.section, styles.inset]}>
+          <Text style={styles.sectionHeading}>Recommended Match</Text>
+          <View style={styles.recommendedCard}>
             <Image
               source={{
                 uri: "https://images.chesscomfiles.com/uploads/v1/user/279806493.53f4c4e2.200x200o.7a09133998d7.jpg",
               }}
-              style={[styles.networkImageLarge]}
+              style={styles.avatarLarge}
             />
-            <View style={styles.recommended_section_body}>
+            <View style={styles.recommendedBody}>
               <View>
-                <Text>⭐the_hamelon🇭🇺⭐</Text>
-                <Text>677 ◌3 days</Text>
-                <Text>SIMILAR SKILL</Text>
+                <Text style={styles.mainText}>⭐the_hamelon🇭🇺⭐</Text>
+                <Text style={styles.subText}>677 ◌3 days</Text>
+                <Text style={styles.tagText}>SIMILAR SKILL</Text>
               </View>
               <View>
-                
                 <Image
-                  source={{
-                    uri: "https://banner2.cleanpng.com/20240122/qkb/transparent-chessboard-icon-black-cat-close-up-shot-white-patc-close-up-shot-of-white-patched-black-1710911149988.webp",
-                  }}
-                  style={[styles.networkImageLarge]}
+                  source={require("../../assets/images/chessboard.png")}
+                  style={styles.iconStandard}
                 />
               </View>
             </View>
           </View>
         </View>
 
-        <View style={[styles.namedSection, styles.bodySection]}>
-          <Text style={styles.body_heading_text}>Stats</Text>
+        <View style={[styles.section]}>
+          <Text style={[styles.sectionHeading, styles.inset]}>Stats</Text>
           <ScrollView
             horizontal={true}
-            contentContainerStyle={styles.horizontalScrollBar}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={[styles.scrollbar, styles.inset]}
           >
-            <View style={[styles.body_container_small, styles.body_box]}></View>
-            <View style={[styles.body_container_small, styles.body_box]}></View>
-            <View style={[styles.body_container_small, styles.body_box]}></View>
-            <View style={[styles.body_container_small, styles.body_box]}></View>
-            <View style={[styles.body_container_small, styles.body_box]}></View>
+            <View style={[styles.card, styles.cardSmall]}>
+              <Image />
+              <Text style={styles.mainText}>151</Text>
+              <Text style={styles.subText}>Rapid</Text>
+            </View>
+            <View style={[styles.card, styles.cardSmall]}>
+              <Image />
+              <Text style={styles.mainText}>Daily</Text>
+              <Text style={styles.subText}>Play 2 Games</Text>
+            </View>
+            <View style={[styles.card, styles.cardSmall]}>
+              <Image />
+              <Text style={styles.mainText}>204</Text>
+              <Text style={styles.subText}>Bullet</Text>
+            </View>
+            <View style={[styles.card, styles.cardSmall]}>
+              <Image />
+              <Text style={styles.mainText}>Blitz</Text>
+              <Text style={styles.subText}>Play 5 Games</Text>
+            </View>
+            <View style={[styles.card, styles.cardSmall]}>
+              <Image />
+              <Text style={styles.mainText}>982</Text>
+              <Text style={styles.subText}>Puzzles</Text>
+            </View>
+            <View style={[styles.card, styles.cardSmall]}>
+              <Image />
+              <Text style={styles.mainText}>All Stats</Text>
+            </View>
           </ScrollView>
         </View>
 
-        <View style={[styles.namedSection, styles.bodySection]}>
-          <Text style={styles.body_heading_text}>Friends</Text>
+        <View style={[styles.section]}>
+          <Text style={[styles.sectionHeading, styles.inset]}>Friends</Text>
           <ScrollView
             horizontal={true}
-            contentContainerStyle={styles.horizontalScrollBar}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={[styles.scrollbar, styles.inset]}
           >
-            <View style={[styles.body_container_large, styles.body_box]}></View>
-            <View style={[styles.body_container_large, styles.body_box]}></View>
-            <View style={[styles.body_container_large, styles.body_box]}></View>
-            <View style={[styles.body_container_large, styles.body_box]}></View>
-            <View style={[styles.body_container_large, styles.body_box]}></View>
+            <View style={[styles.card, styles.cardLarge]}>
+              <Image />
+              <Text>Name</Text>
+              <Text>Online 1 month ago</Text>
+              <View>
+                <Text>Challenge</Text>
+              </View>
+            </View>
+            <View style={[styles.card, styles.cardLarge]}>
+              <Image />
+              <Text>Name</Text>
+              <Text>Online 1 month ago</Text>
+              <View>
+                <Text>Challenge</Text>
+              </View>
+            </View>
+            <View style={[styles.card, styles.cardLarge]}>
+              <Image />
+              <Text>Name</Text>
+              <Text>Online 1 month ago</Text>
+              <View>
+                <Text>Challenge</Text>
+              </View>
+            </View>
+            <View style={[styles.card, styles.cardLarge]}>
+              <Image />
+              <Text>Name</Text>
+              <Text>Online 1 month ago</Text>
+              <View>
+                <Text>Challenge</Text>
+              </View>
+            </View>
+            <View style={[styles.card, styles.cardLarge]}>
+              <Image />
+              <Text>Name</Text>
+              <Text>Online 1 month ago</Text>
+              <View>
+                <Text>Challenge</Text>
+              </View>
+            </View>
           </ScrollView>
         </View>
 
-        <View
-          style={[
-            styles.namedSection,
-            styles.bodySection,
-            styles.bottomBodySection,
-          ]}
-        >
-          <Text style={styles.body_heading_text}>Game History</Text>
+        <View style={[styles.section, styles.inset]}>
+          <Text style={styles.sectionHeading}>Game History</Text>
           <View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View
-              style={[styles.game_history_log, styles.separation_line]}
-            ></View>
-            <View style={styles.game_history_log}></View>
-            <View style={styles.grey_button}></View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/66746068.bb225d6f.384x384o.647464762a5d.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Nelson</Text>
+                <Text style={styles.secondaryText}>(1300)</Text>
+              </View>
+              <View>
+                <Image />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image />
+                </View>
+              </View>
+            </View>
+
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={[styles.historyRow, styles.divider]} />
+            <View style={styles.historyRow} />
+            <View style={styles.secondaryButton}> 
+              <Text style={styles.tertiaryText}>
+                View All Games
+              </Text>
+            </View>
           </View>
         </View>
       </ScrollView>
+
       <View style={styles.footer}>
-        <View></View>
-        <View></View>
+        <View style={styles.primaryButton}>
+          <Text style={styles.primaryButtonText}>Alert</Text>
+        </View>
+        <View style={styles.navRow}>
+          <View>
+            <Image />
+            <Text style={styles.mainText}>Home</Text>
+          </View>
+          <View>
+            <Image />
+            <Text style={styles.mainText}>Puzzles</Text>
+          </View>
+          <View>
+            <Image />
+            <Text style={styles.mainText}>Learn</Text>
+          </View>
+          <View>
+            <Image />
+            <Text style={styles.mainText}>Watch</Text>
+          </View>
+          <View>
+            <Image />
+            <Text style={styles.mainText}>More</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
 }
 
+const colors = {
+  background: "#1E1E1E",
+  bar: "#000000",
+  surface: "#272727",
+  divider: "#5F5F5F",
+  textPrimary: "#FFFFFF",
+  textSecondary: "#929292",
+  green: "#6DA54A",
+  grey: "#3E3E3F",
+  tagText: "rgba(61, 175, 82, 0.9)",
+  tagBackground: "rgba(34, 77, 42, 0.35)",
+};
+
+const radius = {
+  sm: 8,
+  md: 10,
+};
+
 const styles = StyleSheet.create({
+  // Screen structure
+  screen: {
+    flex: 1,
+    backgroundColor: colors.background,
+  },
   header: {
     height: 55,
-    width: "100%",
-    backgroundColor: "#000000",
+    backgroundColor: colors.background,
+    flexDirection: "row",
+    marginVertical: 4
+  },
+  headerLeft: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    gap: 3,
+  },
+  headerRight: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    gap: 3
+  },
+  scrollContent: {
+    gap: 30,
+    paddingTop: 20,
+    paddingBottom: 15,
   },
   footer: {
-    marginBottom: "auto",
     height: 140,
-    width: "100%",
-    backgroundColor: "#000000",
+    backgroundColor: colors.background,
+    paddingHorizontal: 10,
+    paddingTop: 14,
+    paddingBottom: 8,
+    justifyContent: "space-between",
   },
 
-  topBodySection: {
-    paddingTop: 25,
-  },
-
-  bottomBodySection: {
-    paddingBottom: 10,
-  },
-
-  bodySection: {
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-
-  horizontalScrollBar: {
-    gap: 10,
-  },
-  staticBar: {
-    backgroundColor: "#272727",
-    borderRadius: 10,
-  },
-
-  namedSection: {
-    flexDirection: "column",
+  // Sections
+  section: {
     gap: 8,
   },
-
-  networkImageIcon: {
-    width: 50,
-    height: 50,
+  inset: {
+    paddingHorizontal: 10,
   },
-  networkImageLarge: {
-    width: 75,
-    height: 75,
-    borderRadius: 10,
+  sectionHeading: {
+    fontWeight: "700",
+    color: colors.textPrimary,
+  },
+  scrollbar: {
+    gap: 10,
   },
 
-  body_box: {
-    backgroundColor: "#272727",
-    flex: 1,
+  // Cards
+  card: {
+    backgroundColor: colors.surface,
+    borderRadius: radius.md,
     justifyContent: "center",
     alignItems: "center",
   },
-
-  body_container_large: {
-    width: 150,
-    height: 150,
-    borderRadius: 10,
-  },
-  body_container_long: {
-    width: 300,
-    height: 150,
-    borderRadius: 10,
-  },
-  body_container_small: {
+  cardSmall: {
     width: 110,
     height: 110,
-    borderRadius: 8,
+    borderRadius: radius.sm,
   },
-  recommended_section: {
-    width: "100%",
+  cardLarge: {
+    width: 150,
+    height: 150,
+  },
+  cardWide: {
+    width: 300,
+    height: 150,
+  },
+  cardLog: {},
+  recommendedCard: {
     height: 75,
     flexDirection: "row",
+    backgroundColor: colors.surface,
+    borderRadius: radius.md,
   },
-  recommended_section_body: {
+  recommendedBody: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
@@ -245,27 +378,107 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 
-  separation_line: {
+  // Game history
+  historyRow: {
+    height: 60,
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  historyInfo: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    gap: 5,
+  },
+  historyActions: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  historyButton: {
+    height: 40,
+    width: 40,
+  },
+  divider: {
     borderBottomWidth: 1,
-    borderBottomColor: "#5f5f5f",
-  },
-  game_history_log: {
-    height: 50,
-    width: "100%",
-  },
-  grey_button: {
-    color: "#FFFFFF",
-    backgroundColor: "#3E3E3F",
-    width: "100%",
-    height: 45,
-    borderRadius: 10,
+    borderBottomColor: colors.divider,
   },
 
-  screen: {
-    flex: 1,
-    backgroundColor: "#1E1E1E",
+  // Footer nav
+  navRow: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
   },
-  body_heading_text: {
-    color: "#FFFFFF",
+
+  // Buttons
+  primaryButton: {
+    height: 55,
+    backgroundColor: colors.green,
+    borderRadius: radius.md,
+    justifyContent: "center",
+  },
+  primaryButtonText: {
+    color: colors.textPrimary,
+    fontSize: 22,
+    fontWeight: "900",
+    alignSelf: "center",
+  },
+  secondaryButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    height: 40,
+    backgroundColor: colors.grey,
+    borderRadius: radius.sm,
+  },
+
+  // Text
+  mainText: {
+    fontWeight: "700",
+    color: colors.textPrimary,
+    fontSize: 14,
+  },
+  secondaryText: {
+    color: colors.textSecondary,
+    fontSize: 14,
+  },
+  tertiaryText: {
+    fontWeight: "500",
+    color: colors.textPrimary,
+    fontSize:14,
+  },
+  subText: {
+    color: colors.textSecondary,
+    fontSize: 12,
+  },
+
+  tagText: {
+    fontSize: 12,
+    color: colors.tagText,
+    backgroundColor: colors.tagBackground,
+    padding: 1,
+    alignSelf: "flex-start",
+  },
+
+  // Images
+  iconStandard: {
+    width: 50,
+    height: 50,
+  },
+  iconSmall: {
+    width: 30,
+    height: 30,
+  },
+  avatarLarge: {
+    width: 75,
+    height: 75,
+    borderRadius: radius.md,
+  },
+  avatarSmall: {
+    width: 35,
+    height: 35,
+    borderRadius: radius.sm,
   },
 });
