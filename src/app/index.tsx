@@ -206,6 +206,34 @@ export default function Index() {
                 />
                 <Image
                   source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/66746128.1e61845f.384x384o.8eb9b93553c3.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Janjay</Text>
+                <Text style={styles.secondaryText}>(700)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
                     uri: "https://images.chesscomfiles.com/uploads/v1/user/66746068.bb225d6f.384x384o.647464762a5d.png",
                   }}
                   style={styles.avatarSmall}
@@ -213,27 +241,246 @@ export default function Index() {
                 <Text style={styles.mainText}>Nelson</Text>
                 <Text style={styles.secondaryText}>(1300)</Text>
               </View>
-              <View>
-                <Image />
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
                 <View style={[styles.primaryButton, styles.historyButton]}>
-                  <Image />
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/66746128.1e61845f.384x384o.8eb9b93553c3.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Janjay</Text>
+                <Text style={styles.secondaryText}>(700)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/66746152.91c8d55b.384x384o.e1c49c12bfb3.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Elani</Text>
+                <Text style={styles.secondaryText}>(400)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://assets-coaches.chess.com/image/coachlevy.png?v=9f98615d",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Levy</Text>
+                <Text style={styles.secondaryText}>(1600)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/minus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/595311444.b579a591.384x384o.81a9fc9a9349.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Mack Hollins</Text>
+                <Text style={styles.secondaryText}>(1400)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/595311444.b579a591.384x384o.81a9fc9a9349.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Mack Hollins</Text>
+                <Text style={styles.secondaryText}>(1400)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/595311444.b579a591.384x384o.81a9fc9a9349.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Mack Hollins</Text>
+                <Text style={styles.secondaryText}>(1400)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://assets-coaches.chess.com/image/coachlevy.png?v=9f98615d",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Levy</Text>
+                <Text style={styles.secondaryText}>(1600)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/minus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
+                </View>
+              </View>
+            </View>
+            <View style={[styles.historyRow, styles.divider]}>
+              <View style={styles.historyInfo}>
+                <Image
+                  source={require("../../assets/images/robot.png")}
+                  style={styles.avatarSmall}
+                />
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/596498326.b2c9b107.384x384o.0d2a8b90d856.png",
+                  }}
+                  style={styles.avatarSmall}
+                />
+                <Text style={styles.mainText}>Checkacabra</Text>
+                <Text style={styles.secondaryText}>(1250)</Text>
+              </View>
+              <View style={styles.historyActions}>
+                <Image
+                  source={require("../../assets/images/plus.png")}
+                  style={styles.iconXSmall}
+                />
+                <View style={[styles.primaryButton, styles.historyButton]}>
+                  <Image
+                    source={require("../../assets/images/star.png")}
+                    style={styles.iconXSmall}
+                  />
                 </View>
               </View>
             </View>
 
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={[styles.historyRow, styles.divider]} />
-            <View style={styles.historyRow} />
-            <View style={styles.secondaryButton}> 
-              <Text style={styles.tertiaryText}>
-                View All Games
-              </Text>
+            <View style={styles.secondaryButton}>
+              <Text style={styles.tertiaryText}>View All Games</Text>
             </View>
           </View>
         </View>
@@ -298,7 +545,7 @@ const styles = StyleSheet.create({
     height: 55,
     backgroundColor: colors.background,
     flexDirection: "row",
-    marginVertical: 4
+    marginVertical: 4,
   },
   headerLeft: {
     flex: 1,
@@ -312,7 +559,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
-    gap: 3
+    gap: 3,
   },
   scrollContent: {
     gap: 30,
@@ -393,14 +640,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 5,
   },
+
   historyActions: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "flex-end",
+    alignItems: "center",
+    gap: 10,
   },
   historyButton: {
     height: 40,
     width: 40,
+    alignItems: "center",
+    justifyContent: "center",
   },
   divider: {
     borderBottomWidth: 1,
@@ -430,6 +682,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 40,
+    marginTop: 10,
     backgroundColor: colors.grey,
     borderRadius: radius.sm,
   },
@@ -447,7 +700,7 @@ const styles = StyleSheet.create({
   tertiaryText: {
     fontWeight: "500",
     color: colors.textPrimary,
-    fontSize:14,
+    fontSize: 14,
   },
   subText: {
     color: colors.textSecondary,
@@ -470,6 +723,10 @@ const styles = StyleSheet.create({
   iconSmall: {
     width: 30,
     height: 30,
+  },
+  iconXSmall: {
+    width: 20,
+    height: 20,
   },
   avatarLarge: {
     width: 75,
