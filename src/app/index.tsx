@@ -1,4 +1,13 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Alert,
+  Image,
+  ImageBackground,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -54,7 +63,7 @@ export default function Index() {
               source={{
                 uri: "https://images.chesscomfiles.com/uploads/v1/user/596498884.29b3ac57.384x384o.38afbf9fb911.png",
               }}
-              style={styles.iconStandard}
+              style={styles.iconLarge}
             />
             <Text style={styles.mainText}>Play Bots</Text>
             <Text style={styles.subText}>Count Morphy</Text>
@@ -64,21 +73,78 @@ export default function Index() {
               source={{
                 uri: "https://assets-coaches.chess.com/image/coachlevy.png?v=9f98615d",
               }}
-              style={styles.iconStandard}
+              style={styles.iconLarge}
             />
             <Text style={styles.mainText}>Play Coach</Text>
             <Text style={styles.subText}>Levy</Text>
           </View>
-          <View style={[styles.card, styles.cardWide]} />
+          <View style={[styles.card, styles.cardWide]}>
+            <ImageBackground
+              source={{
+                uri: "https://images.chesscomfiles.com/uploads/v1/news/1731576.d8333390.668x375o.8301a143cf99@2x.png",
+              }}
+              resizeMode="cover"
+              style={styles.specialCard}
+            >
+              <View style={styles.specialHeader}>
+                <Image
+                  source={require("../../assets/images/puzzle-piece.png")}
+                  style={styles.iconMed}
+                />
+                <Text style={styles.specialTitle}>Puzzles</Text>
+              </View>
+
+              <View style={styles.specialFooter}>
+                <View style={styles.progressInfo}>
+                  <Text style={styles.mainText}>116,689</Text>
+                  <View style={styles.progressTrack}>
+                    <View style={[styles.progressFill, { width: "20%" }]} />
+                  </View>
+                </View>
+                <View style={[styles.primaryButton, styles.specialButton]}>
+                  <Text
+                    style={[styles.primaryButtonText, styles.specialButtonText]}
+                  >
+                    Solve!
+                  </Text>
+                </View>
+              </View>
+            </ImageBackground>
+          </View>
           <View style={[styles.card, styles.cardLarge]}>
             <Image
               source={require("../../assets/images/calendar-dailypuzzle.png")}
-              style={styles.iconStandard}
+              style={styles.iconLarge}
             />
-            <Text style={styles.mainText}>Play Coach</Text>
-            <Text style={styles.subText}>Levy</Text>
+            <Text style={styles.mainText}>Daily Puzzle</Text>
+            <Text style={styles.subText}>🔥6</Text>
           </View>
-          <View style={[styles.card, styles.cardWide]} />
+          <View style={[styles.card, styles.cardWide]}>
+            <ImageBackground
+               source={require("../../assets/images/background.png")}
+              resizeMode="cover"
+              style={styles.specialCard}
+            >
+              <View style={styles.specialHeader}>
+                <Image
+                  source={require("../../assets/images/lessons.png")}
+                  style={styles.iconMed}
+                />
+                <Text style={styles.specialTitle}>Learn</Text>
+              </View>
+
+              <View style={styles.specialFooter}>
+                <View style={styles.progressInfo}></View>
+                <View style={[styles.primaryButton, styles.specialButton]}>
+                  <Text
+                    style={[styles.primaryButtonText, styles.specialButtonText]}
+                  >
+                    Next Lesson!
+                  </Text>
+                </View>
+              </View>
+            </ImageBackground>
+          </View>
         </ScrollView>
 
         <View style={[styles.section, styles.inset]}>
@@ -99,7 +165,7 @@ export default function Index() {
               <View>
                 <Image
                   source={require("../../assets/images/chessboard.png")}
-                  style={styles.iconStandard}
+                  style={styles.iconLarge}
                 />
               </View>
             </View>
@@ -114,32 +180,50 @@ export default function Index() {
             contentContainerStyle={[styles.scrollbar, styles.inset]}
           >
             <View style={[styles.card, styles.cardSmall]}>
-              <Image />
+              <Image
+                source={require("../../assets/images/time-rapid.png")}
+                style={styles.iconMed}
+              />
               <Text style={styles.mainText}>151</Text>
               <Text style={styles.subText}>Rapid</Text>
             </View>
             <View style={[styles.card, styles.cardSmall]}>
-              <Image />
+              <Image
+                source={require("../../assets/images/time-daily.png")}
+                style={styles.iconMed}
+              />
               <Text style={styles.mainText}>Daily</Text>
               <Text style={styles.subText}>Play 2 Games</Text>
             </View>
             <View style={[styles.card, styles.cardSmall]}>
-              <Image />
+              <Image
+                source={require("../../assets/images/time-bullet.png")}
+                style={styles.iconMed}
+              />
               <Text style={styles.mainText}>204</Text>
               <Text style={styles.subText}>Bullet</Text>
             </View>
             <View style={[styles.card, styles.cardSmall]}>
-              <Image />
+              <Image
+                source={require("../../assets/images/time-blitz.png")}
+                style={styles.iconMed}
+              />
               <Text style={styles.mainText}>Blitz</Text>
               <Text style={styles.subText}>Play 5 Games</Text>
             </View>
             <View style={[styles.card, styles.cardSmall]}>
-              <Image />
+              <Image
+                source={require("../../assets/images/puzzle-piece.png")}
+                style={styles.iconMed}
+              />
               <Text style={styles.mainText}>982</Text>
               <Text style={styles.subText}>Puzzles</Text>
             </View>
             <View style={[styles.card, styles.cardSmall]}>
-              <Image />
+              <Image
+                source={require("../../assets/images/rating-stats.png")}
+                style={styles.iconMed}
+              />
               <Text style={styles.mainText}>All Stats</Text>
             </View>
           </ScrollView>
@@ -152,44 +236,79 @@ export default function Index() {
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={[styles.scrollbar, styles.inset]}
           >
-            <View style={[styles.card, styles.cardLarge]}>
-              <Image />
-              <Text>Name</Text>
-              <Text>Online 1 month ago</Text>
-              <View>
-                <Text>Challenge</Text>
+            <View style={[styles.card, styles.cardLong]}>
+              <View style={styles.friendInfo}>
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/314296937.f5e8c8af.200x200o.32f92f812c27.png",
+                  }}
+                  style={styles.avatarLarge}
+                />
+                <Text style={styles.mainText}>rheeneetus 🇵🇹</Text>
+                <Text style={styles.subText}>Online 4 hours ago</Text>
+              </View>
+              <View style={styles.secondaryButton}>
+                <Text style={styles.tertiaryText}>Challenge</Text>
               </View>
             </View>
-            <View style={[styles.card, styles.cardLarge]}>
-              <Image />
-              <Text>Name</Text>
-              <Text>Online 1 month ago</Text>
-              <View>
-                <Text>Challenge</Text>
+            <View style={[styles.card, styles.cardLong]}>
+              <View style={styles.friendInfo}>
+                <Image
+                  source={{
+                    uri: "https://www.chess.com/bundles/web/images/noavatar_l.84a92436.gif",
+                  }}
+                  style={styles.avatarLarge}
+                />
+                <Text style={styles.mainText}>kaylaaa2007 🇨🇦</Text>
+                <Text style={styles.subText}>Online 3 days ago</Text>
+              </View>
+              <View style={styles.secondaryButton}>
+                <Text style={styles.tertiaryText}>Challenge</Text>
               </View>
             </View>
-            <View style={[styles.card, styles.cardLarge]}>
-              <Image />
-              <Text>Name</Text>
-              <Text>Online 1 month ago</Text>
-              <View>
-                <Text>Challenge</Text>
+            <View style={[styles.card, styles.cardLong]}>
+              <View style={styles.friendInfo}>
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/388014499.9b96a2bf.200x200o.7ce20cfb0d7a.jpg",
+                  }}
+                  style={styles.avatarLarge}
+                />
+                <Text style={styles.mainText}>floorboardss 🇨🇦</Text>
+                <Text style={styles.subText}>Online 1 month ago</Text>
+              </View>
+              <View style={styles.secondaryButton}>
+                <Text style={styles.tertiaryText}>Challenge</Text>
               </View>
             </View>
-            <View style={[styles.card, styles.cardLarge]}>
-              <Image />
-              <Text>Name</Text>
-              <Text>Online 1 month ago</Text>
-              <View>
-                <Text>Challenge</Text>
+            <View style={[styles.card, styles.cardLong]}>
+              <View style={styles.friendInfo}>
+                <Image
+                  source={{
+                    uri: "https://www.chess.com/bundles/web/images/noavatar_l.84a92436.gif",
+                  }}
+                  style={styles.avatarLarge}
+                />
+                <Text style={styles.mainText}>Steving82 🇨🇦</Text>
+                <Text style={styles.subText}>Online 1 month ago</Text>
+              </View>
+              <View style={styles.secondaryButton}>
+                <Text style={styles.tertiaryText}>Challenge</Text>
               </View>
             </View>
-            <View style={[styles.card, styles.cardLarge]}>
-              <Image />
-              <Text>Name</Text>
-              <Text>Online 1 month ago</Text>
-              <View>
-                <Text>Challenge</Text>
+            <View style={[styles.card, styles.cardLong]}>
+              <View style={styles.friendInfo}>
+                <Image
+                  source={{
+                    uri: "https://images.chesscomfiles.com/uploads/v1/user/393407925.0e5a280c.50x50o.2df5a9dd97b9.jpg",
+                  }}
+                  style={styles.avatarLarge}
+                />
+                <Text style={styles.mainText}>omar_escobar23 🇦🇷</Text>
+                <Text style={styles.subText}>Online 1 month ago</Text>
+              </View>
+              <View style={styles.secondaryButton}>
+                <Text style={styles.tertiaryText}>Challenge</Text>
               </View>
             </View>
           </ScrollView>
@@ -450,7 +569,7 @@ export default function Index() {
                 </View>
               </View>
             </View>
-            <View style={[styles.historyRow, styles.divider]}>
+            <View style={styles.historyRow}>
               <View style={styles.historyInfo}>
                 <Image
                   source={require("../../assets/images/robot.png")}
@@ -487,28 +606,47 @@ export default function Index() {
       </ScrollView>
 
       <View style={styles.footer}>
-        <View style={styles.primaryButton}>
+        <Pressable
+          onPress={() => Alert.alert("Alert Button pressed")}
+          style={styles.primaryButton}
+        >
           <Text style={styles.primaryButtonText}>Alert</Text>
-        </View>
+        </Pressable>
         <View style={styles.navRow}>
-          <View>
-            <Image />
+          <View style={styles.navItem}>
+            <Image
+              source={require("../../assets/images/home.png")}
+              style={styles.iconXSmall}
+            />
+
             <Text style={styles.mainText}>Home</Text>
           </View>
-          <View>
-            <Image />
+          <View style={styles.navItem}>
+            <Image
+              source={require("../../assets/images/puzzle.png")}
+              style={styles.iconXSmall}
+            />
             <Text style={styles.mainText}>Puzzles</Text>
           </View>
-          <View>
-            <Image />
+          <View style={styles.navItem}>
+            <Image
+              source={require("../../assets/images/education.png")}
+              style={styles.iconXSmall}
+            />
             <Text style={styles.mainText}>Learn</Text>
           </View>
-          <View>
-            <Image />
+          <View style={styles.navItem}>
+            <Image
+              source={require("../../assets/images/binoculars.png")}
+              style={styles.iconXSmall}
+            />
             <Text style={styles.mainText}>Watch</Text>
           </View>
-          <View>
-            <Image />
+          <View style={styles.navItem}>
+            <Image
+              source={require("../../assets/images/menu.png")}
+              style={styles.iconXSmall}
+            />
             <Text style={styles.mainText}>More</Text>
           </View>
         </View>
@@ -526,12 +664,14 @@ const colors = {
   textSecondary: "#929292",
   green: "#6DA54A",
   grey: "#3E3E3F",
+  blue: "#008CD1",
   tagText: "rgba(61, 175, 82, 0.9)",
   tagBackground: "rgba(34, 77, 42, 0.35)",
+  track: "rgba(255, 255, 255, 0.15)",
 };
 
 const radius = {
-  sm: 8,
+  sm: 6,
   md: 10,
 };
 
@@ -594,6 +734,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.surface,
     borderRadius: radius.md,
+    overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -610,7 +751,12 @@ const styles = StyleSheet.create({
     width: 300,
     height: 150,
   },
-  cardLog: {},
+  cardLong: {
+    width: 150,
+    height: 215,
+    padding: 10,
+    justifyContent: "space-between",
+  },
   recommendedCard: {
     height: 75,
     flexDirection: "row",
@@ -623,6 +769,55 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     padding: 10,
+  },
+  friendInfo: {
+    alignItems: "center",
+    gap: 4,
+  },
+
+  // Special Card
+  specialCard: {
+    flex: 1,
+    alignSelf: "stretch",
+    padding: 14,
+    justifyContent: "space-between",
+  },
+  specialHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  specialTitle: {
+    color: colors.textPrimary,
+    fontSize: 26,
+    fontWeight: "800",
+  },
+  specialFooter: {
+    flexDirection: "row",
+    alignItems: "flex-end",
+    gap: 16,
+  },
+  progressInfo: {
+    flex: 1,
+    gap: 8,
+  },
+  progressTrack: {
+    height: 14,
+    borderRadius: 7,
+    backgroundColor: colors.track,
+    overflow: "hidden",
+  },
+  progressFill: {
+    height: "100%",
+    borderRadius: 7,
+    backgroundColor: colors.green,
+  },
+  specialButton: {
+    height: 44,
+    paddingHorizontal: 16,
+  },
+  specialButtonText: {
+    fontSize: 18,
   },
 
   // Game history
@@ -640,7 +835,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 5,
   },
-
   historyActions: {
     flex: 1,
     flexDirection: "row",
@@ -664,6 +858,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
   },
+  navItem: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
   // Buttons
   primaryButton: {
@@ -682,9 +880,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 40,
+    width: "100%",
     marginTop: 10,
+
     backgroundColor: colors.grey,
     borderRadius: radius.sm,
+  },
+  tertiaryButton: {
+    height: 55,
+    backgroundColor: colors.blue,
+    borderRadius: radius.md,
+    justifyContent: "center",
   },
 
   // Text
@@ -716,7 +922,12 @@ const styles = StyleSheet.create({
   },
 
   // Images
-  iconStandard: {
+
+  iconMed: {
+    width: 40,
+    height: 40,
+  },
+  iconLarge: {
     width: 50,
     height: 50,
   },
@@ -727,6 +938,11 @@ const styles = StyleSheet.create({
   iconXSmall: {
     width: 20,
     height: 20,
+  },
+  avatarXLarge: {
+    width: 80,
+    height: 80,
+    borderRadius: radius.sm,
   },
   avatarLarge: {
     width: 75,
